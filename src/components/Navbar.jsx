@@ -4,8 +4,23 @@ export class Navbar extends Component {
   render() {
     return (
       <>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
+        <nav>
+          <div className='logo'>
+            <span>CheerCraze</span>
+          </div>
+          <ul className='nav-links'>
+            <li>
+              <Link to='/' className='link'>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to='/about' className='link'>
+                About
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </>
     )
   }
