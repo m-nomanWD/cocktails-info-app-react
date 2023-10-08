@@ -14,14 +14,21 @@ const useFetch = () => {
       if (drinksData) {
         const fetchData = drinksData.drinks
         const newDrinks = fetchData.map((item) => {
-          const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
-            item
+          const {
+            idDrink,
+            strDrink,
+            strDrinkThumb,
+            strAlcoholic,
+            strGlass,
+            strInstructions,
+          } = item
           return {
             id: idDrink,
             name: strDrink,
             img: strDrinkThumb,
             info: strAlcoholic,
             glass: strGlass,
+            instructions: strInstructions,
           }
         })
 

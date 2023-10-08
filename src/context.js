@@ -5,7 +5,7 @@ const AppProvider = ({ children }) => {
   const { isError, isLoading, data } = useFetch()
 
   return (
-    <AppContext.Provider value={{ isError, isLoading, data }}>
+    <AppContext.Provider value={{ isError, isLoading, data, useFetch }}>
       {children}
     </AppContext.Provider>
   )

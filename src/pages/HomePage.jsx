@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchForm from '../components/SearchForm'
-import CocktailCard from '../components/CocktailCard'
+import Cocktails from '../components/Cocktails'
 import { useGlobalContext } from '../context'
 
 const HomePage = () => {
@@ -8,7 +8,12 @@ const HomePage = () => {
     <>
       <main>
         <SearchForm />
-        <CocktailCard />
+        <section className='cocktails-container'>
+          <h1 className='cocktails-container-title'>
+            Cocktails From CheerS!!!
+          </h1>
+          <Cocktails />
+        </section>
       </main>
     </>
   )
