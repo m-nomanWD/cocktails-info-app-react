@@ -1,11 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import useFetch from './useFetch'
 const AppContext = React.createContext()
+
 const AppProvider = ({ children }) => {
-  const { isError, isLoading, data } = useFetch()
+  const { isError, isLoading, data, urlModifier, setUrlModifier, fetchData } =
+    useFetch()
 
   return (
-    <AppContext.Provider value={{ isError, isLoading, data, useFetch }}>
+    <AppContext.Provider
+      value={{
+        isError,
+        isLoading,
+        data,
+        urlModifier,
+        setUrlModifier,
+        fetchData,
+      }}
+    >
       {children}
     </AppContext.Provider>
   )

@@ -31,6 +31,10 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
+            <Route
+              path='/cocktailDetailPage'
+              element={<CocktailDetailPage />}
+            />
             <Route path='*' element={<Error404 />} />
           </Routes>
         </Router>

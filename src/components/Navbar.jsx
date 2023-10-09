@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+
 export class Navbar extends Component {
   render() {
     return (
       <>
         <nav>
-          <div className='logo'>
-            <span>CheerCraze</span>
-          </div>
+          <span className='logo'>
+            <img src={process.env.PUBLIC_URL + '/logo.png'} alt='' />
+          </span>
           <ul className='nav-links'>
             <li>
               <Link to='/' className='link'>

@@ -5,6 +5,7 @@ import { DotLoader } from 'react-spinners'
 import Error from './Error'
 function Cocktails() {
   const { isError, data, isLoading } = useGlobalContext()
+  console.log(data)
   if (isLoading) {
     return (
       <DotLoader
@@ -16,18 +17,19 @@ function Cocktails() {
       />
     )
   }
-  if (isError) {
+  if (isError.flag) {
     return <Error />
+  } else {
+    return (
+      <main>
+        <section className='cocktails-container'>
+          {data.map((item) => {
+            return <CocktailCard item={item} key={item.id} />
+          })}
+        </section>
+      </main>
+    )
   }
-  return (
-    <main>
-      <section className='cocktails-container'>
-        {data.map((item) => {
-          return <CocktailCard item={item} key={item.id} />
-        })}
-      </section>
-    </main>
-  )
 }
 
 export default Cocktails

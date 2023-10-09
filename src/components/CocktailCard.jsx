@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { useGlobalContext } from '../context'
+import { Link } from 'react-router-dom'
 
 function CocktailCard({ item }) {
   const { id, name, img, info, glass } = item
@@ -16,7 +16,9 @@ function CocktailCard({ item }) {
           <h5>{info}</h5>
         </div>
         <div className='button-container'>
-          <button>Detail</button>
+          <Link to='/cocktailDetailPage' className='link'>
+            <button>Detail</button>
+          </Link>
         </div>
       </div>
     </article>

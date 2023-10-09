@@ -9,9 +9,6 @@ const HomePage = () => {
       <main>
         <SearchForm />
         <section className='cocktails-container'>
-          <h1 className='cocktails-container-title'>
-            Cocktails From CheerS!!!
-          </h1>
           <Cocktails />
         </section>
       </main>

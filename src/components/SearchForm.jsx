@@ -1,38 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
+import useFetch from '../useFetch'
+import { useGlobalContext } from '../context'
 
-export class SearchForm extends Component {
-  render() {
-    return (
-      <>
-        <main>
-          <article className='form-container'>
-            <form
-              action=''
-              onSubmit={(e) => {
-                e.preventDefault()
-                toast('🦄 Wow so easy!', {
-                  position: 'top-right',
-                  autoClose: 5000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: 'light',
-                })
+function SearchForm() {
+  const { urlModifier, setUrlModifier, fetchData } = useGlobalContext()
+  return (
+    <>
+      <main>
+        <article className='form-container'>
+          <h2 className='form-title'>Search your Favriout Cocktail...</h2>
+          <form action=''>
+            <input
+              type='text'
+              placeholder='Search'
+              className='form-input'
+              value={urlModifier}
+              onChange={(e) => {
+                setUrlModifier(e.currentTarget.value)
               }}
-            >
-              <input type='text' placeholder='Search' className='form-input' />
-              <button type='submit' className='form-button '>
-                Search
-              </button>
-            </form>
-          </article>
-        </main>
-      </>
-    )
-  }
+            />
+          </form>
+        </article>
+      </main>
+    </>
+  )
 }
 
 export default SearchForm
