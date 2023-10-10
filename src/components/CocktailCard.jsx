@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../context'
 
 function CocktailCard({ item }) {
+  const { setCheckId } = useGlobalContext()
   const { id, name, img, info, glass } = item
 
   return (
@@ -17,7 +19,14 @@ function CocktailCard({ item }) {
         </div>
         <div className='button-container'>
           <Link to='/cocktailDetailPage' className='link'>
-            <button>Detail</button>
+            <button
+              onClick={() => {
+                setCheckId(id)
+                console.log(id)
+              }}
+            >
+              Detail
+            </button>
           </Link>
         </div>
       </div>

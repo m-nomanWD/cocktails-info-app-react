@@ -110,8 +110,7 @@ input:focus {
   flex-wrap: wrap;
   margin-top: 2rem;
 }
-main {
-}
+
 .cocktail-card {
   max-width: 270px;
   padding: 1rem;
@@ -139,7 +138,8 @@ main {
   height: 100%;
 }
 
-.cocktail-info h2 {
+.cocktail-info h2,
+.detail-cocktail-info h2 {
   color: brown;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -148,18 +148,20 @@ main {
   font-size: 34px;
   margin-top: 1rem;
 }
-.cocktail-info h3 {
+.cocktail-info h3,
+.detail-cocktail-info h3 {
   color: rgb(41, 39, 39);
   font-size: 24px;
   text-transform: capitalize;
 }
-.cocktail-info h5 {
+.cocktail-info h5,
+.detail-cocktail-info h5 {
   color: rgb(49, 48, 47);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.cocktail-info .button-container button {
+.button-container button {
   width: 90px;
   height: 30px;
   background-color: brown;
@@ -173,7 +175,50 @@ main {
   margin-top: 8px;
   font-family: 'Nanum Myeongjo', serif;
 }
+.cocktail-detail {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 800px;
+  margin: 3rem auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px -4px #a52a2acb;
+  background-color: rgba(245, 222, 179, 0.618);
+}
 
+.detail-cocktail-img {
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  box-sizing: border-box;
+}
+.detail-cocktail-img img {
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+}
+.detail-cocktail-info {
+  width: 400px;
+  margin-left: 1.5rem;
+  padding: 1.5rem;
+  border-left: 1px solid #a52a2a8a;
+  min-height: 100%;
+}
+.detail-cocktail-info h3 {
+  margin-top: 0.5rem;
+}
+.detail-cocktail-info p {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: rgb(49, 48, 47);
+}
+
+/* 
+
+*/
 @media screen and (max-width: 620px) {
   body {
     padding: 0rem 3rem;
@@ -210,5 +255,20 @@ main {
   .form-input {
     min-width: 100%;
     border-radius: 4px;
+  }
+  .cocktail-detail {
+    flex-direction: column;
+    width: 90vw;
+    margin: 3rem auto;
+  }
+  .detail-cocktail-img {
+    min-height: auto;
+    width: 100%;
+  }
+  .detail-cocktail-info {
+    margin: 2rem 0;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #a52a2a8a;
   }
 }

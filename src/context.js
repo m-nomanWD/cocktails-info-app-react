@@ -3,6 +3,7 @@ import useFetch from './useFetch'
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
+  const [checkId, setCheckId] = useState('')
   const { isError, isLoading, data, urlModifier, setUrlModifier, fetchData } =
     useFetch()
 
@@ -15,6 +16,8 @@ const AppProvider = ({ children }) => {
         urlModifier,
         setUrlModifier,
         fetchData,
+        checkId,
+        setCheckId,
       }}
     >
       {children}
