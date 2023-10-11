@@ -117,7 +117,6 @@ input:focus {
   box-sizing: border-box;
   margin: 1rem;
   overflow: hidden;
-  cursor: pointer;
   transition: 0.3s all;
   border-radius: 2px;
   box-shadow: 0px 4px 5px -4px rgba(165, 42, 42, 0.543);
@@ -160,6 +159,14 @@ input:focus {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heart-icon {
+  cursor: pointer;
 }
 .button-container button {
   width: 90px;
@@ -216,9 +223,60 @@ input:focus {
   color: rgb(49, 48, 47);
 }
 
-/* 
+.about-container h1,
+h2,
+h5 {
+  color: rgb(165, 42, 42);
+  margin: 1.5rem 0;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+}
 
-*/
+.about-container b {
+  color: brown;
+}
+ol {
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+ol > li {
+  color: #a52a2a;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+}
+.links {
+  margin: 0;
+  background-color: 'red';
+  margin: 1rem 0;
+}
+.links h5 {
+  margin: 0;
+  color: rgb(49, 48, 47);
+}
+.links h5 a {
+  color: #a52a2a;
+  padding: 0 0.4rem;
+}
+.about-container h1 {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.about-container p {
+  font-size: 18px;
+  line-height: 1.75rem;
+}
+.heart-icon {
+  width: 25px;
+  transition: 0.2s all linear;
+}
+.heart-icon:hover {
+  width: 30px;
+}
+
 @media screen and (max-width: 620px) {
   body {
     padding: 0rem 3rem;
@@ -240,6 +298,9 @@ input:focus {
   }
   .form-input {
     width: 90%;
+  }
+  .about-container h1 {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 550px) {
