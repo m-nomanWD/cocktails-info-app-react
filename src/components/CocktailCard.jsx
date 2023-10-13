@@ -28,14 +28,6 @@ function CocktailCard({ item }) {
               Detail
             </button>
           </Link>
-          <img
-            className='heart-icon'
-            src='/heart.png'
-            alt='heart-icon'
-            onClick={() => {
-              alert('hello world')
-            }}
-          />
         </div>
       </div>
     </article>
