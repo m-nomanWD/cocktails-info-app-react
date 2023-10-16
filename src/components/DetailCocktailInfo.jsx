@@ -1,13 +1,15 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function DetailCocktailInfo() {
+  const { id } = useParams()
+
   const { checkId, data } = useGlobalContext()
 
-  const detailedCocktail = data.filter((item) => item.id == checkId)
+  const detailedCocktail = data.find((item) => item.id === id)
 
-  const [{ id, name, img, glass, info, instructions }] = detailedCocktail
+  const { name, img, glass, info, instructions } = detailedCocktail
 
   return (
     <>

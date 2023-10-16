@@ -9,10 +9,9 @@ import AboutPage from './pages/AboutPage'
 import CocktailDetailPage from './pages/CocktailDetailPage'
 import Error404 from './pages/Error404'
 import FavListPage from './pages/FavListPage'
-import toast, { Toaster, ToastBar } from 'react-hot-toast'
+import { Toaster, ToastBar } from 'react-hot-toast'
 
 function App() {
-  const { checkId } = useGlobalContext()
   return (
     <>
       <Toaster>
@@ -35,7 +34,10 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
-            <Route path='cocktailDetailPage' element={<CocktailDetailPage />} />
+            <Route
+              path='cocktailDetailPage/:id'
+              element={<CocktailDetailPage />}
+            />
             <Route path='/favListPage' element={<FavListPage />} />
             <Route path='*' element={<Error404 />} />
           </Routes>

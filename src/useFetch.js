@@ -7,7 +7,6 @@ const useFetch = () => {
   const [urlModifier, setUrlModifier] = useState('')
   const [data, setData] = useState([])
   const fetchData = async (url) => {
-    console.log(url)
     setIsLoading(true)
     setIsError({ ...isError, flag: false })
     try {
@@ -37,7 +36,7 @@ const useFetch = () => {
         })
 
         setData(newDrinks)
-        console.log(data)
+
         setIsLoading(false)
       } else {
         setData([])

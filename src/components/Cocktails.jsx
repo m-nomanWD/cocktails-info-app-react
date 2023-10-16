@@ -5,7 +5,7 @@ import { DotLoader } from 'react-spinners'
 import Error from './Error'
 function Cocktails() {
   const { isError, data, isLoading } = useGlobalContext()
-  console.log(data)
+
   if (isLoading) {
     return (
       <DotLoader

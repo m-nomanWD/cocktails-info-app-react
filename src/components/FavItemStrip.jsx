@@ -31,15 +31,8 @@ export default function FavItemStrip({ cocktail }) {
         >
           remove
         </span>
-        <Link to='/CocktailDetailPage'>
-          <button
-            className='strip-btn-detail'
-            onClick={() => {
-              setCheckId(id)
-            }}
-          >
-            Detail
-          </button>
+        <Link to={`/CocktailDetailPage/${id}`}>
+          <button className='strip-btn-detail'>Detail</button>
         </Link>
       </div>
     </article>
